@@ -21,6 +21,10 @@ namespace Hack_2gether
                    .ItemWithPath("Hack Together Microsoft Graph and .NET Calendar.ics")
                    .Content.PutAsync(stream, null, new CancellationToken());
 
+
+                // READ EMAIL
+                var user = await graphClient.Users["AdeleV@22q3cy.onmicrosoft.com"].GetAsync();
+                var email = await graphClient.Users[user!.Id].Messages.GetAsync();
             }
             catch (ODataError odataError)
             {

@@ -8,6 +8,7 @@ namespace Hack_2gether
     {
         public GraphServiceClient? TokenAuth()
         {
+            // FOR APP PERMISSION  (ME: X)
             string[] scopes = { "https://graph.microsoft.com/.default" };
             ClientSecretCredential clientSecretCredential =
                 new(
